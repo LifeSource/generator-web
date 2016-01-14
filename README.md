@@ -15,10 +15,13 @@ This is a simple yeoman generator for me to practices the foundational pieces of
 4. npm link
 ```
 ### Creating and running the web app
-Once you have installed the appropriate components and tools. You can simply scaffold out a simple static web app with the following commands:
+Once you have installed the appropriate components and tools. You can simply scaffold out a simple static web app. Go to where you want to put your project.
+
 ```
-1. yo web
-2. npm start
+1. mkdir <project name>
+2. cd <project name>
+3. yo web
+4. npm start
 ```
 This should fire up your web browser using browser-sync and watch the files in the current directory for any changes and reloads the browser.
 
