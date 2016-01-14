@@ -26,12 +26,14 @@ This should fire up your web browser using browser-sync and watch the files in t
 ```
 App
  |
+ package.json - this is the node entry file for your app, contains the dependencies and setup information.
+ |
  index.html - the default landing page where the magic happens.
  |
- scripts - javascripts are stored here. (app.js)
+ scripts/ - javascripts are stored here. (app.js)
  |
- styles - css are stored in this folder. (site.css)
+ styles/ - css are stored in this folder. (site.css)
  |
- images - images are stored in this folder.
+ images/ - images are stored in this folder.
 ```
 ### Enjoy and Good Luck!
