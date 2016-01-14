@@ -23,6 +23,7 @@ Once you have installed the appropriate components and tools. You can simply sca
 This should fire up your web browser using browser-sync and watch the files in the current directory for any changes and reloads the browser.
 
 ### Application Structure
+```
 App
  |
  index.html - the default landing page where the magic happens.
@@ -32,5 +33,5 @@ App
  styles - css are stored in this folder. (site.css)
  |
  images - images are stored in this folder.
-
-### Enjoy!
+```
+### Enjoy and Good Luck!
