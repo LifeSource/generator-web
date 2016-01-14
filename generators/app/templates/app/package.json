@@ -2,7 +2,7 @@
     "name": "",
     "version": "1.0.0",
     "scripts": {
-        "start": "browser-sync start --server --files='*.*'"
+        "start": "browser-sync start --server --files='**/*.*'"
     },
     "devDependencies": {
         "browser-sync": "^2.7.10"
