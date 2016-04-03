@@ -3,10 +3,18 @@ This is a simple yeoman generator for me to practices the foundational pieces of
 
 ### Software Requirements
 ```
-1. Node
-2. NPM
-3. Yeoman 
+1. Node	  - http://www.nodejs.org
+2. NPM	  - should come bundle with node onced its installed
+3. Yoeman - npm install yo -g
+4. Git	  - get it from the git website.
 ```
+
+### Technology Stack
+1. Node, NPM
+2. JavaScript
+3. SaSS (.SCSS) - Node-Sass
+4. Git
+
 ### Installation Instructions
 ```
 1. git clone <repository url>
@@ -14,8 +22,8 @@ This is a simple yeoman generator for me to practices the foundational pieces of
 3. npm install
 4. npm link
 ```
-### Creating and running the web app
-Once you have installed the appropriate components and tools. You can simply scaffold out a simple static web app. Go to where you want to put your project.
+### Scaffolding out a basic web application
+Once you have installed the appropriate components and tools. You can simply scaffold out a simple static web app. Follow the instruction below:
 
 ```
 1. mkdir <project name>
@@ -35,7 +43,7 @@ App
  |
  scripts/ - javascripts are stored here. (app.js)
  |
- styles/ - css are stored in this folder. (site.css)
+ styles/ - stylus files are stored in this folder, the CSS will be generated from the NPM tasks when you run ```npm start```
  |
  images/ - images are stored in this folder.
 ```

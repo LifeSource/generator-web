@@ -2,3 +2,11 @@
 $float-left: "float: left;";
 $float-right: "float: right"; 
 $float-clear: "clear: both";
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
