@@ -2,8 +2,9 @@
 	"name": "",
 	"version": "1.0.0",
 	"scripts": {
-		"start": "npm-run-all --parallel styles serve",
-		"styles": "node-sass --watch styles:css --style compressed",
+		"start": "npm-run-all --parallel styles watch:styles serve",
+		"styles": "node-sass styles --output css --output-style compressed",
+		"watch:styles": "node-sass --watch styles --output css --output-style compressed",
 		"serve": "browser-sync start --server --files='**/*.*'"
 	},
 	"devDependencies": {
