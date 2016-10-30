@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"start": "npm-run-all --parallel styles watch:styles serve",
+    "tsc": "tsc --watch typescripts --outDir app/scripts",
 		"styles": "node-sass styles --output css --output-style compressed",
 		"watch:styles": "node-sass --watch styles --output css --output-style compressed",
 		"serve": "browser-sync start --server --files='**/*.*'"
