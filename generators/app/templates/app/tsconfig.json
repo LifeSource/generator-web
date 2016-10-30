@@ -1,0 +1,11 @@
+{
+  "command": "tsc",
+  "isShellCommand": true,
+  "args": [
+    "--target": "ES5",
+    "--module": "commonjs",
+    "--outDir": "app/scripts",
+    "--sourceMap"
+  ],
+  "problemMatcher": "$tsc"
+}
