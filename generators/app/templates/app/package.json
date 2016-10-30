@@ -2,15 +2,30 @@
 	"name": "",
 	"version": "1.0.0",
 	"scripts": {
-		"start": "npm-run-all --parallel styles watch:styles serve",
-    "tsc": "tsc --watch typescripts --outDir app/scripts",
-		"styles": "node-sass styles --output css --output-style compressed",
-		"watch:styles": "node-sass --watch styles --output css --output-style compressed",
-		"serve": "browser-sync start --server --files='**/*.*'"
+		"clean": "rimraf dist",
+		"prebuild": "npm run clean",
+		"build": "npm-run-all build:*",
+		"build:index": "cpx index.html dist",
+		"build:js": "webpack --watch",
+		"serve": "browser-sync start --server dist --files='dist/**/*.*'",
+		"start": "npm-run-all --parallel build serve"
 	},
 	"devDependencies": {
+		"autoprefixer": "^6.5.1",
+		"autoprefixer-loader": "^3.2.0",
 		"browser-sync": "^2.7.10",
+		"cpx": "^1.5.0",
+		"css-loader": "^0.25.0",
+		"extract-text-webpack-plugin": "^1.0.1",
 		"node-sass": "^3.4.2",
-		"npm-run-all": "^1.7.0"
-	}
+		"npm-run-all": "^3.1.1",
+		"rimraf": "^2.5.4",
+		"sass-loader": "^4.0.2",
+		"style-loader": "^0.13.1",
+		"ts-loader": "^0.9.5",
+		"typescript": "^2.0.6",
+		"webpack": "^1.13.3",
+		"yarn": "^0.16.1"
+	},
+	"dependencies": {}
 }

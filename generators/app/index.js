@@ -3,15 +3,17 @@ var generators = require("yeoman-generator");
 
 module.exports = generators.Base.extend({
 
-    constructor: function() {
+    constructor: function () {
         generators.Base.apply(this, arguments);
     },
 
-    writing: function() {
+    writing: function () {
         this.directory("app", ".");
     },
 
-    install: function() {
-        this.npmInstall();
+    install: function () {
+        this.spawnCommand("yarn", function() {
+            console.log("Finished installing packages...");
+        });
     }
 });
