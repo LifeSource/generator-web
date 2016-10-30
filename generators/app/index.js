@@ -12,8 +12,6 @@ module.exports = generators.Base.extend({
   },
 
   install: function() {
-    console.log("\nInstalling packages with yarn please wait a moment...");
     this.spawnCommand("yarn");
-    });
   }
 });
