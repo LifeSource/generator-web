@@ -5,12 +5,12 @@ module.exports = {
   context: path.resolve("src"),
   entry: ["./app.ts"],
   output: {
-    path: path.resolve("dist/assets"),
-    publicPath: "/dist/assets",
-    filename: "app.js"
+    path: path.resolve("dist"),
+    publicPath: "/dist",
+    filename: "scripts/app.js"
   },
   plugins: [
-    new ExtractTextPlugin("styles.css")
+    new ExtractTextPlugin("styles/styles.css")
   ],
   devServer: {
     contentBase: "dist"
