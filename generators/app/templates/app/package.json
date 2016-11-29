@@ -2,7 +2,7 @@
 	"name": "",
 	"version": "1.0.0",
 	"scripts": {
-    "postinstall": "typings install --save dt~mocha dt~chai dt~sinon --global",
+    "postinstall": "yarn add @types/mocha @types/chai @types/sinon",
 		"clean": "rimraf dist",
 		"prebuild": "npm run clean",
 		"build": "npm-run-all build:*",
