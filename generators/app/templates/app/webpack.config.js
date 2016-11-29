@@ -1,4 +1,5 @@
 const path = require("path")
+const BrowserSync = require("browser-sync-webpack-plugin")
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
@@ -10,7 +11,12 @@ module.exports = {
     filename: "scripts/app.js"
   },
   plugins: [
-    new ExtractTextPlugin("styles/styles.css")
+    new ExtractTextPlugin("styles/styles.css"),
+    new BrowserSync({
+      host: 'localhost',
+      port: 3000,
+      server: { baseDir: ['dist'] }
+    })
   ],
   devServer: {
     contentBase: "dist"
