@@ -13,10 +13,10 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin("styles/styles.css"),
     new BrowserSync({
-      host: 'localhost',
+      host: "localhost",
       port: 3000,
       files: "**/*.*",
-      server: { baseDir: ['dist'] }
+      server: { baseDir: ["dist"] }
     })
   ],
   devServer: {
@@ -24,7 +24,7 @@ module.exports = {
   },
   devtool: "source-map",
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.ts', 'tsx', '.js', 'jsx']
+    extensions: ["", ".webpack.js", ".web.js", ".ts", "tsx", ".js", "jsx"]
   },
   module: {
     loaders: [
@@ -41,7 +41,7 @@ module.exports = {
       {
         test: /\.ts$/,
         exclude: /node_modules/,
-        loader: 'ts-loader'
+        loader: "ts-loader"
       }
     ]
   }
