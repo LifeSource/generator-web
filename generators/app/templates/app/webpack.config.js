@@ -24,19 +24,22 @@ module.exports = {
   },
   devtool: "source-map",
   resolve: {
-    extensions: ["", ".webpack.js", ".web.js", ".ts", "tsx", ".js", "jsx"]
+    extensions: [".ts", "tsx", ".js", "jsx"]
   },
   module: {
-    loaders: [
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract("style", "css!autoprefixer")
-      },
+   rules: [
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract("style", "css!autoprefixer!sass")
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: [
+            "style-loader",
+            "css-loader",
+            "autoprefixer-loader",
+            "sass-loader"
+          ]
+        })
       },
       {
         test: /\.ts$/,
