@@ -5,10 +5,10 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
   entry: {
-    app: "./src/app.ts"
+    app: path.resolve("./src/app.ts")
   },
   output: {
-    publicPath: "dist",
+    path: path.resolve("dist"),
     filename: "scripts/[name].min.js"
   },
   plugins: [
