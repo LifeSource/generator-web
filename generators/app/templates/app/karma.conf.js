@@ -1,21 +1,21 @@
 // Karma configuration
 // Generated on Mon Nov 28 2016 20:58:52 GMT+0800 (AWST)
-var webpackConfig = require('./webpack.config');
+var webpackConfig = require("./webpack.config")
 
 module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: "",
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'chai', 'sinon'],
+    frameworks: ["mocha", "chai", "sinon"],
 
 
     // list of files / patterns to load in the browser
     files: [
-      'src/**/*.test.ts'
+      "src/**/*.test.ts"
     ],
 
 
@@ -32,9 +32,9 @@ module.exports = function(config) {
 
 
     // test results reporter to use
-    // possible values: 'dots', 'progress'
+    // possible values: "dots", "progress"
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['mocha'],
+    reporters: ["mocha"],
 
 
     // web server port
@@ -56,7 +56,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ["Chrome"],
 
 
     // Continuous Integration mode
@@ -67,12 +67,12 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity,
 
-    webpack: {
-      module: webpackConfig.module,
-      resolve: webpackConfig.resolve
-    },
+    webpack: webpackConfig,
     webpackMiddleware: {
-      stats: 'errors-only'
+      stats: "errors-only"
+    },
+    mime: {
+      'text/x-typescript': ['ts','tsx']
     }
   })
 }
